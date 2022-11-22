@@ -2,8 +2,10 @@ EE_LIB =	libSDL2_gfx.a
 EE_LIBS= \
 	-lgskit \
 	-lgskit_toolkit \
-	-ldmakit -lSDL2 \
-	-lSDL2main -lSDL2_test \
+	-ldmakit \
+	-lSDL2 \
+	-lSDL2main \
+	-lSDL2_test \
 	-lSDL2_mixer \
 	-lps2_drivers
 
