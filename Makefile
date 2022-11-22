@@ -29,24 +29,24 @@ EE_LDFLAGS = \
 all:$(EE_LIB)
 
 install:
-	install -d $(DESTDIR)$(PS2SDK)/ports/include
+	install -d $(DESTDIR)$(PS2SDK)/ports/include/SDL2
 
-	install -m 644 SDL2_framerate.h $(DESTDIR)$(PS2SDK)/ports/include
-	install -m 644 SDL2_gfxPrimitives.h $(DESTDIR)$(PS2SDK)/ports/include
-	install -m 644 SDL2_gfxPrimitives_font.h $(DESTDIR)$(PS2SDK)/ports/include
-	install -m 644 SDL2_imageFilter.h $(DESTDIR)$(PS2SDK)/ports/include
-	install -m 644 SDL2_rotozoom.h $(DESTDIR)$(PS2SDK)/ports/include
+	install -m 644 SDL2_framerate.h $(DESTDIR)$(PS2SDK)/ports/include/SDL2
+	install -m 644 SDL2_gfxPrimitives.h $(DESTDIR)$(PS2SDK)/ports/include/SDL2
+	install -m 644 SDL2_gfxPrimitives_font.h $(DESTDIR)$(PS2SDK)/ports/include/SDL2
+	install -m 644 SDL2_imageFilter.h $(DESTDIR)$(PS2SDK)/ports/include/SDL2
+	install -m 644 SDL2_rotozoom.h $(DESTDIR)$(PS2SDK)/ports/include/SDL2
 
 	install -d $(DESTDIR)$(PS2SDK)/ports/lib
 
 	install -m 644 $(EE_LIB) $(DESTDIR)$(PS2SDK)/ports/lib
 
 uninstall:
-	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2_framerate.h
-	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2_gfxPrimitives.h
-	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2_gfxPrimitives_font.h
-	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2_imageFilter.h
-	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2_rotozoom.h
+	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2/SDL2_imageFilter.h
+	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2/SDL2_framerate.h
+	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2/SDL2_gfxPrimitives.h
+	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2/SDL2_gfxPrimitives_font.h
+	rm $(DESTDIR)$(PS2SDK)/ports/include/SDL2/SDL2_rotozoom.h
 	rm $(DESTDIR)$(PS2SDK)/ports/lib/$(EE_LIB)
 
 clean:
